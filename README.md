@@ -1,41 +1,52 @@
-1.  **Clone this Repo**
+Contentful Gatsby Starter Blog
 
-    ```shell
-    # clone this repo via github link
-    git clone https://github.com/YazanAlhalabi/gatsby-contentful-demo.git
-    ```
+Create a Gatsby blog powered by Contentful.
 
-2.  **Install all packages**
+The index page of the starter blog
 
-    Using either yarn/npm install
+Static sites are scalable, secure and have very little required maintenance. They come with a drawback though. Not everybody feels good editing files, building a project and uploading it somewhere. This is where Contentful comes into play.
 
-    ```shell
-    cd gatsby-contentful-demo
-    yarn
-    ```
+With Contentful and Gatsby you can connect your favorite static site generator with an API that provides an easy to use interface for people writing content and automate the publishing using services like Travis CI or Netlify.
+Features
 
-    or
+    Simple content model and structure. Easy to adjust to your needs.
+    Use the synchronization feature of our Delivery API.
+    Responsive/adaptive images via gatsby-image and our Images API.
 
-    ```shell
-    cd gatsby-contentful-demo
-    npm install
-    ```
+Getting started
 
-3.  **Add Contentful**
+See our official Contentful getting started guide.
+Get the source code and install dependencies.
 
-    Sign up account on Contentful.
+$ git clone https://github.com/contentful/starter-gatsby-blog.git
+$ npm install
 
-    Create new space.
+Or use the Gatsby CLI.
 
-    Go to Space's setting -> Api keys -> Generate new Personal Access Tokens -> Add token to .env file.
+$ gatsby new contentful-starter-blog https://github.com/contentful/starter-gatsby-blog/
 
-    ```shell
-    CONTENTFUL_SPACE_ID <your generated Contentful personal access token>
-    CONTENTFUL_ACCESS_TOKEN <your Space ID>
-    ```
+Set up of the needed content model and create a configuration file
 
-4.  **Feel free to create an issue or PR if you:**
+This project comes with a Contentful setup command npm run setup.
 
-- `have noticed a bug`
-- `have better UI/UX`
-- `refactor components`
+This command will ask you for a space ID, and access tokens for the Contentful Management and Delivery API and then import the needed content model into the space you define and write a config file (./.contentful.json).
+
+npm run setup automates that for you but if you want to do it yourself rename .contentful.json.sample to .contentful.json and add your configuration in this file.
+Crucial Commands
+npm run dev
+
+Run the project locally with live reload in development mode.
+npm run build
+
+Run a production build into ./public. The result is ready to be put on any static hosting you prefer.
+npm run serve
+
+Spin up a production-ready server with your blog. Don't forget to build your page beforehand.
+Deployment
+
+See the official Contentful getting started guide.
+Contribution
+
+Feel free to open pull requests to fix bugs. If you want to add features, please have a look at the original version. It is always open to contributions and pull requests.
+
+You can learn more about how Contentful userland is organized by visiting our about repository.
